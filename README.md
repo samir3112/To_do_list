@@ -2,7 +2,7 @@
 Personal project of mine that consists of a simple To-Do list.
 Developped the project with HTML, CSS, and JavaScript.
 
-- Had fun applying the concepts that I learned at school and on my own on the web. 
+- Had fun applying the concepts that I learned at school and also applied some concepts that I've learned on my own from the web. 
 
 # Demo
 
