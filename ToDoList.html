@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My To-Do List!</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="addTask">
+            <input type="text" id="taskInput" placeholder="Add a Task">
+            <button id="addButton">Add</button>
+        </div>
+        <ol class="notCompleted" id="notCompletedList">
+            <h3>Not Completed</h3>
+        </ol>
+        <ol class="Completed" id="completedList">
+            <h3>Completed</h3>
+        </ol>
+    </div>
+    <script>
+        const taskInput = document.getElementById('taskInput');
+        const addButton = document.getElementById('addButton');
+        const notCompletedList = document.getElementById('notCompletedList');
+        const completedList = document.getElementById('completedList');
+        // Add event listeners to the button and input field
+        addButton.addEventListener('click', addTask);
+        taskInput.addEventListener('keydown', handleKeyPress);
+        //Function to add a task to the list
+        function addTask() {
+            const taskText = taskInput.value.trim();
+            if (taskText !== '') {
+                const listItem = createListItem(taskText);
+                notCompletedList.appendChild(listItem);
+                taskInput.value = '';
+            }
+        }
+        //Function to create an new list element.
+        function createListItem(taskText) {
+            const listItem = document.createElement('li');
+            const checkButton = createButton('check');
+            const deleteButton = createButton('trash');
+    
+            listItem.textContent = taskText;
+            listItem.appendChild(checkButton);
+            listItem.appendChild(deleteButton);
+    
+            checkButton.addEventListener('click', () => {
+                listItem.remove();
+                completedList.appendChild(listItem);
+                checkButton.style.display = 'none';
+            });
+    
+            deleteButton.addEventListener('click', () => {
+                listItem.remove();
+            });
+    
+            return listItem;
+        }
+        //Function to create buttons with their respective symbols.
+        function createButton(iconName) {
+            const button = document.createElement('button');
+            const icon = document.createElement('i');
+            icon.className = `fa fa-${iconName}`;
+            button.appendChild(icon);
+            return button;
+        }
+        //function that calls addTask() when we press enter.
+        function handleKeyPress(event) {
+            if (event.keyCode === 13) {
+                addTask();
+            }
+        }
+    </script>
+</body>
+</html>
