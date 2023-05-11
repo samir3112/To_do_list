@@ -8,5 +8,6 @@ Developped the project with HTML, CSS, and JavaScript.
 
 
 
-https://github.com/samir3112/To_do_list/assets/131091810/334803af-4b44-4a76-acf4-8e26ac8ef43b
 
+
+![Untitled design](https://github.com/samir3112/To_do_list/assets/131091810/11a5c2a4-0bc2-471d-a8ff-23a6353b5fa5)
