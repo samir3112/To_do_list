@@ -1,8 +1,8 @@
 # To_do_list
-Personal project of mine that consists of a simple To-Do list.
+Personal project of mine that consists of developping a simple To_Do list program.
 Developped the project with HTML, CSS, and JavaScript.
 
-- Had fun applying the concepts that I learned at school and also applied some concepts that I've learned on my own from the web. 
+- Had fun applying the concepts that I was learning during the semester and applied some concepts that I got to learn on my own. 
 
 # Demo
 
